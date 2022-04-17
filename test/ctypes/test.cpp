@@ -25,6 +25,7 @@ void write(int data){
     p -> next = (PtrToNode)malloc(sizeof(Node));
     p = p -> next;
     p -> data = data;
+    p -> next = NULL;
 }
 
 List *read(){
@@ -33,7 +34,8 @@ List *read(){
     for (PtrToNode p = n.Head; p; p = p -> next){
         a.list[i] = p->data;
         i++;
-
+    }
+        for(int i=0;i<10;i++){
     }
     return &a;
 }
